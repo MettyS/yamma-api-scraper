@@ -1,0 +1,346 @@
+{
+  "_type": "News",
+  "webSearchUrl": "https://www.bing.com/news/search?q=top+stories&form=TNSA02",
+  "value": [
+    {
+      "_type": "NewsArticle",
+      "name": "Trump Pressured Georgia Secretary of State to 'Find' Votes ",
+      "url": "https://www.msn.com/en-us/news/politics/trump-pressured-georgia-secretary-of-state-to-find-votes/ar-BB1crpdk",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.LMNq9mAJx-CPJzXB-W4wEy&pid=News",
+          "width": 552,
+          "height": 314
+        },
+        "isLicensed": true
+      },
+      "description": "During a phone call Saturday, the president urged Brad Raffensperger to overturn election results that delivered the state to President-elect Joe Biden.",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "The Wall Street Journal.",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_fb65cf047b726a4d148957726730accd"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-04T01:09:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "Podcast helps save Curtis Flowers from death row ",
+      "url": "https://www.msn.com/en-us/news/crime/podcast-helps-save-curtis-flowers-from-death-row/ar-BB1cruXf",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.ausM24Fl4Wx-qjt76IJj9C&pid=News",
+          "width": 1200,
+          "height": 630
+        },
+        "isLicensed": true
+      },
+      "description": "Curtis Flowers spent nearly half his life in prison for the murders of four people and may still be on death row if not for the investigative work of a podcast.",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "CBS News",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_4ae1aeddeaac21a710cf413c2980e769"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-04T00:46:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "U.S. may cut some Moderna vaccine doses in half to speed rollout, official says ",
+      "url": "https://www.msn.com/en-us/news/us/us-may-cut-some-moderna-vaccine-doses-in-half-to-speed-rollout-official-says/ar-BB1crfAS",
+      "description": "The U.S. government is considering giving some people half the dose of Moderna's COVID-19 vaccine in order to speed vaccinations, a federal official said on Sunday. Moncef Slaoui, head of Operation",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "Reuters",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_62e71bb461e92ae25d37bed673fc53b9"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-03T21:16:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "Woman killed, 3 deputies wounded in shooting outside nightclub ",
+      "url": "http://www.msn.com/en-us/news/crime/woman-killed-3-deputies-wounded-in-shooting-outside-nightclub/ar-BB1cqO3N",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.2VrmyTKXMPoR1SejiFAT1y&pid=News",
+          "width": 1200,
+          "height": 630
+        },
+        "isLicensed": true
+      },
+      "description": "A woman was killed and three sheriff's deputies were wounded when a gunman opened fire early Sunday during a fight in the parking lot of a Houston nightclub, authorities said.   The shooting erupted",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "ABC News",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_0cfcddaa71cae000b74e3bf52bc84d78"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-03T18:52:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "Biden inauguration to feature virtual, nationwide parade ",
+      "url": "https://www.msn.com/en-my/news/politics/biden-inauguration-to-feature-virtual-nationwide-parade/ar-BB1crsGv",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.Sf03aP2dl82Rku6nOlV-8C&pid=News",
+          "width": 1200,
+          "height": 630
+        },
+        "isLicensed": true
+      },
+      "description": "WASHINGTON (AP) — President-elect Joe Biden's inauguration will include a \"virtual parade across America” consistent with crowd limits during the coronavirus era, organizers announced Sunday.",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "Associated Press",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AMMS_6c39d1938749f17b7db3d338632af3cb"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-04T00:10:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "Pelosi wins tight race for House speaker ",
+      "url": "http://www.msn.com/en-us/news/politics/pelosi-wins-tight-race-for-house-speaker/ar-BB1cqNyo",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.015mAnexRicXOufuYM29py&pid=News",
+          "width": 1200,
+          "height": 630
+        },
+        "isLicensed": true
+      },
+      "description": "The House of Representatives has narrowly reelected Nancy Pelosi as speaker, after the California Democrat received 216 votes. The result was announced with fanfare at 4:49 p.m. by the House Clerk,",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "ABC News",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_0cfcddaa71cae000b74e3bf52bc84d78"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-03T22:00:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "Asia shares start new year in upbeat mood, much already priced in ",
+      "url": "https://www.msn.com/en-us/money/markets/asia-shares-start-new-year-in-upbeat-mood-much-already-priced-in/ar-BB1crdPX",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.00dr3bvGQ9ijn5FGC1OJDS&pid=News",
+          "width": 1200,
+          "height": 630
+        },
+        "isLicensed": true
+      },
+      "description": "Asian share markets hit pause on Monday as reports of a possible tightening in coronavirus emergency rules for Tokyo pulled Japanese stocks off 30-year highs, while also lifting the safe-haven yen.",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "Reuters",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_62e71bb461e92ae25d37bed673fc53b9"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-04T00:34:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "Last days in Georgia runoffs that will decide Senate control ",
+      "url": "https://www.msn.com/en-us/news/politics/last-days-in-georgia-runoffs-that-will-decide-senate-control/ar-BB1cr8E3",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.YqHRTeogDjXDfJl7swfLvC&pid=News",
+          "width": 1200,
+          "height": 630
+        },
+        "isLicensed": true
+      },
+      "description": "Two days before dueling runoffs in Georgia that will determine U.S. Senate control, GOP incumbent Kelly Loeffler said she had not decided whether to join Republican colleagues in challenging the",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "Associated Press",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AMMS_6c39d1938749f17b7db3d338632af3cb"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-03T17:14:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "'Pivotal moment' as Britain set to roll out AstraZeneca vaccine ",
+      "url": "https://www.msn.com/en-us/news/world/pivotal-moment-as-britain-set-to-roll-out-astrazeneca-vaccine/ar-BB1crj56",
+      "description": "Britain will become the first country to roll out the low cost and easily transportable AstraZeneca and Oxford University COVID-19 vaccine on Monday, another step forward in the global response to",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "Reuters",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_62e71bb461e92ae25d37bed673fc53b9"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-04T00:01:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "Pope criticizes people going on holiday to avoid Covid-19 lockdowns ",
+      "url": "https://www.msn.com/en-us/news/world/pope-criticizes-people-going-on-holiday-to-avoid-covid-19-lockdowns/ar-BB1cr2EJ",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.iFt7nGxEcQrmIQPu43UlyC&pid=News",
+          "width": 600,
+          "height": 315
+        },
+        "isLicensed": true
+      },
+      "description": "Pope Francis has condemned people who traveled abroad for a vacation and avoid Covid-19 lockdowns, adding that holidaymakers were not considering the effect of their actions on others.",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "CNN",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_34c0b98797bce395c518158cf055747c"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-03T15:50:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "New Congress updates: GOP lawmaker objects to fellow lawmakers being seated due to Trump's fraud claims ",
+      "url": "https://www.msn.com/en-us/news/politics/new-congress-updates-gop-lawmaker-objects-to-fellow-lawmakers-being-seated-due-to-trumps-fraud-claims/ar-BB1cr4FL",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.cSPqZBxZ2C2ii07buCowiS&pid=News",
+          "width": 1200,
+          "height": 630
+        },
+        "isLicensed": true
+      },
+      "description": "House and Senate lawmakers are sworn in Sunday, the start of a new Congress tasked with working with the Biden administration and fighting COVID-19.",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "USA TODAY",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_e1f4ddfe292e1858eda89344172946a9"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-04T00:24:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "US coronavirus: California reports more than 45,000 new coronavirus cases as surge continues into new year ",
+      "url": "https://www.msn.com/en-us/news/us/us-coronavirus-california-reports-more-than-45-000-new-coronavirus-cases-as-surge-continues-into-new-year/ar-BB1cqS0R",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.rQLMIOIN24lsYBmDJEV6VC&pid=News",
+          "width": 600,
+          "height": 315
+        },
+        "isLicensed": true
+      },
+      "description": "California reported Sunday that 45,352 people newly tested positive for Covid-19, continuing a surge that has pushed hospitals and their exhausted staff to the brink.",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "CNN",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_34c0b98797bce395c518158cf055747c"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-03T19:50:00.0000000Z"
+    }
+  ]
+}

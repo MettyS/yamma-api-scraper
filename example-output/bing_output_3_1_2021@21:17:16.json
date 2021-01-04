@@ -34,33 +34,33 @@
     },
     {
       "_type": "NewsArticle",
-      "name": "'Her toughest test yet': Nancy Pelosi to wield speaker's gavel with thin majority in what may be her last term ",
-      "url": "https://www.msn.com/en-us/news/politics/her-toughest-test-yet-nancy-pelosi-to-wield-speakers-gavel-with-thin-majority-in-what-may-be-her-last-term/ar-BB1cq2uB",
+      "name": "Podcast helps save Curtis Flowers from death row ",
+      "url": "https://www.msn.com/en-us/news/crime/podcast-helps-save-curtis-flowers-from-death-row/ar-BB1cruXf",
       "image": {
         "_type": "ImageObject",
         "thumbnail": {
           "_type": "ImageObject",
-          "contentUrl": "https://www.bing.com/th?id=OVFT.0-Hm47Iq2672KI6I6Z-Oli&pid=News",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.ausM24Fl4Wx-qjt76IJj9C&pid=News",
           "width": 1200,
           "height": 630
         },
         "isLicensed": true
       },
-      "description": "House Speaker Nancy Pelosi is set to take the gavel one last time Sunday as the House elects who will lead them through the start of a post-Trump era.",
+      "description": "Curtis Flowers spent nearly half his life in prison for the murders of four people and may still be on death row if not for the investigative work of a podcast.",
       "provider": [
         {
           "_type": "Organization",
-          "name": "USA TODAY",
+          "name": "CBS News",
           "image": {
             "_type": "ImageObject",
             "thumbnail": {
               "_type": "ImageObject",
-              "contentUrl": "https://www.bing.com/th?id=AR_e1f4ddfe292e1858eda89344172946a9"
+              "contentUrl": "https://www.bing.com/th?id=AR_4ae1aeddeaac21a710cf413c2980e769"
             }
           }
         }
       ],
-      "datePublished": "2021-01-03T14:36:00.0000000Z"
+      "datePublished": "2021-01-04T00:46:00.0000000Z"
     },
     {
       "_type": "NewsArticle",
@@ -84,63 +84,23 @@
     },
     {
       "_type": "NewsArticle",
-      "name": "New Congress updates: GOP lawmaker objects to fellow lawmakers being seated due to Trump's fraud claims ",
-      "url": "https://www.msn.com/en-us/news/politics/new-congress-updates-gop-lawmaker-objects-to-fellow-lawmakers-being-seated-due-to-trumps-fraud-claims/ar-BB1cr4FL",
-      "image": {
-        "_type": "ImageObject",
-        "thumbnail": {
-          "_type": "ImageObject",
-          "contentUrl": "https://www.bing.com/th?id=OVFT.cSPqZBxZ2C2ii07buCowiS&pid=News",
-          "width": 1200,
-          "height": 630
-        },
-        "isLicensed": true
-      },
-      "description": "House and Senate lawmakers are sworn in Sunday, the start of a new Congress tasked with working with the Biden administration and fighting COVID-19.",
+      "name": "Sheriff's deputy: 1 dead, 1 hurt in shooting at Texas church ",
+      "url": "https://www.msn.com/en-us/news/crime/sheriffs-deputy-1-dead-1-hurt-in-shooting-at-texas-church/ar-BB1cr1tM",
+      "description": "One person has been killed and another was wounded in a shooting at a church in East Texas Sunday morning, a sheriff's deputy said. A suspect who fled the Starrville Methodist Church in Winona after",
       "provider": [
         {
           "_type": "Organization",
-          "name": "USA TODAY",
+          "name": "Associated Press",
           "image": {
             "_type": "ImageObject",
             "thumbnail": {
               "_type": "ImageObject",
-              "contentUrl": "https://www.bing.com/th?id=AR_e1f4ddfe292e1858eda89344172946a9"
+              "contentUrl": "https://www.bing.com/th?id=AMMS_6c39d1938749f17b7db3d338632af3cb"
             }
           }
         }
       ],
-      "datePublished": "2021-01-04T00:24:00.0000000Z"
-    },
-    {
-      "_type": "NewsArticle",
-      "name": "New U.S. Congress faces tricky course amid political uncertainty ",
-      "url": "https://www.msn.com/en-us/news/politics/new-us-congress-faces-tricky-course-amid-political-uncertainty/ar-BB1cr50B",
-      "image": {
-        "_type": "ImageObject",
-        "thumbnail": {
-          "_type": "ImageObject",
-          "contentUrl": "https://www.bing.com/th?id=OVFT.qzecECnWnpKxla3dV9Wn-y&pid=News",
-          "width": 1200,
-          "height": 630
-        },
-        "isLicensed": true
-      },
-      "description": "A new U.S. Congress convened on Sunday in an atmosphere of political uncertainty, with Senate control undecided, a smaller Democratic majority in the House of Representatives and a Republican fight",
-      "provider": [
-        {
-          "_type": "Organization",
-          "name": "Reuters",
-          "image": {
-            "_type": "ImageObject",
-            "thumbnail": {
-              "_type": "ImageObject",
-              "contentUrl": "https://www.bing.com/th?id=AR_62e71bb461e92ae25d37bed673fc53b9"
-            }
-          }
-        }
-      ],
-      "datePublished": "2021-01-03T14:26:00.0000000Z"
+      "datePublished": "2021-01-03T17:51:00.0000000Z"
     },
     {
       "_type": "NewsArticle",
@@ -174,19 +134,49 @@
     },
     {
       "_type": "NewsArticle",
-      "name": "U.S. Senate control, and Biden's agenda, at stake as Georgia runoff elections loom ",
-      "url": "https://www.msn.com/en-us/news/politics/us-senate-control-and-bidens-agenda-at-stake-as-georgia-runoff-elections-loom/ar-BB1cqPYt",
+      "name": "Biden inauguration to feature virtual, nationwide parade ",
+      "url": "http://www.msn.com/en-us/news/politics/biden-inauguration-to-feature-virtual-nationwide-parade/ar-BB1crsGv",
       "image": {
         "_type": "ImageObject",
         "thumbnail": {
           "_type": "ImageObject",
-          "contentUrl": "https://www.bing.com/th?id=OVFT.VzHBIcUNRVrGo0xmdQ69IS&pid=News",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.Sf03aP2dl82Rku6nOlV-8C&pid=News",
           "width": 1200,
           "height": 630
         },
         "isLicensed": true
       },
-      "description": "Control of the U.S. Senate – and with it, the likely fate of President-elect Joe Biden's legislative agenda – will be on the ballot on Tuesday when voters in Georgia decide twin runoff elections.  ",
+      "description": "WASHINGTON (AP) — President-elect Joe Biden's inauguration will include a \"virtual parade across America” consistent with crowd limits during the coronavirus era, organizers announced Sunday.",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "Associated Press",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AMMS_6c39d1938749f17b7db3d338632af3cb"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-04T00:10:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "Asia shares given pause by Tokyo lockdown talk ",
+      "url": "https://www.msn.com/en-us/money/markets/asia-shares-given-pause-by-tokyo-lockdown-talk/ar-BB1crdPX",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.00dr3bvGQ9ijn5FGC1OJDS&pid=News",
+          "width": 1200,
+          "height": 630
+        },
+        "isLicensed": true
+      },
+      "description": "Asian share markets hit pause on Monday as reports of a possible tightening in coronavirus emergency rules for Tokyo pulled Japanese stocks off 30-year highs, while also lifting the safe-haven yen.",
       "provider": [
         {
           "_type": "Organization",
@@ -200,7 +190,7 @@
           }
         }
       ],
-      "datePublished": "2021-01-03T11:05:00.0000000Z"
+      "datePublished": "2021-01-04T00:34:00.0000000Z"
     },
     {
       "_type": "NewsArticle",
@@ -231,66 +221,6 @@
         }
       ],
       "datePublished": "2021-01-03T18:52:00.0000000Z"
-    },
-    {
-      "_type": "NewsArticle",
-      "name": "WikiLeaks founder Assange to hear UK judge's ruling on extradition to US ",
-      "url": "https://www.msn.com/en-us/news/world/wikileaks-founder-assange-to-hear-uk-judges-ruling-on-extradition-to-us/ar-BB1crny8",
-      "image": {
-        "_type": "ImageObject",
-        "thumbnail": {
-          "_type": "ImageObject",
-          "contentUrl": "https://www.bing.com/th?id=OVFT.DJaiyPtbFEOhgXe4VSGCYi&pid=News",
-          "width": 1200,
-          "height": 630
-        },
-        "isLicensed": true
-      },
-      "description": "WikiLeaks founder Julian Assange will learn on Monday whether a British judge has approved his extradition to the United States to face charges including espionage over the release of secret U.S.",
-      "provider": [
-        {
-          "_type": "Organization",
-          "name": "Reuters",
-          "image": {
-            "_type": "ImageObject",
-            "thumbnail": {
-              "_type": "ImageObject",
-              "contentUrl": "https://www.bing.com/th?id=AR_62e71bb461e92ae25d37bed673fc53b9"
-            }
-          }
-        }
-      ],
-      "datePublished": "2021-01-04T00:09:00.0000000Z"
-    },
-    {
-      "_type": "NewsArticle",
-      "name": "Biden inauguration to feature virtual, nationwide parade ",
-      "url": "https://www.msn.com/en-us/news/politics/biden-inauguration-to-feature-virtual-nationwide-parade/ar-BB1crsGv",
-      "image": {
-        "_type": "ImageObject",
-        "thumbnail": {
-          "_type": "ImageObject",
-          "contentUrl": "https://www.bing.com/th?id=OVFT.Sf03aP2dl82Rku6nOlV-8C&pid=News",
-          "width": 1200,
-          "height": 630
-        },
-        "isLicensed": true
-      },
-      "description": "WASHINGTON (AP) — President-elect Joe Biden's inauguration will include a \"virtual parade across America” consistent with crowd limits during the coronavirus era, organizers announced Sunday.",
-      "provider": [
-        {
-          "_type": "Organization",
-          "name": "Associated Press",
-          "image": {
-            "_type": "ImageObject",
-            "thumbnail": {
-              "_type": "ImageObject",
-              "contentUrl": "https://www.bing.com/th?id=AMMS_6c39d1938749f17b7db3d338632af3cb"
-            }
-          }
-        }
-      ],
-      "datePublished": "2021-01-04T00:10:00.0000000Z"
     },
     {
       "_type": "NewsArticle",
@@ -341,6 +271,66 @@
         }
       ],
       "datePublished": "2021-01-03T15:50:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "'That's real:' Fauci rejects Trump claim that U.S. coronavirus deaths overcounted ",
+      "url": "https://www.msn.com/en-us/news/us/that-s-real-fauci-rejects-trump-claim-that-u-s-coronavirus-deaths-overcounted/ar-BB1craA2",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.NfgGIMt32rtNK0Hvrp09hS&pid=News",
+          "width": 1200,
+          "height": 630
+        },
+        "isLicensed": true
+      },
+      "description": "Two top U.S. health officials on Sunday disputed a claim by President Donald Trump that federal data on COVID-19 cases and deaths in the United States is overblown, and both expressed optimism that",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "Reuters",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_62e71bb461e92ae25d37bed673fc53b9"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-03T16:09:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "New Congress updates: GOP lawmaker objects to fellow lawmakers being seated due to Trump's fraud claims ",
+      "url": "https://www.msn.com/en-us/news/politics/new-congress-updates-gop-lawmaker-objects-to-fellow-lawmakers-being-seated-due-to-trumps-fraud-claims/ar-BB1cr4FL",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.cSPqZBxZ2C2ii07buCowiS&pid=News",
+          "width": 1200,
+          "height": 630
+        },
+        "isLicensed": true
+      },
+      "description": "House and Senate lawmakers are sworn in Sunday, the start of a new Congress tasked with working with the Biden administration and fighting COVID-19.",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "USA TODAY",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_e1f4ddfe292e1858eda89344172946a9"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-04T00:24:00.0000000Z"
     }
   ]
 }

@@ -1,0 +1,346 @@
+{
+  "_type": "News",
+  "webSearchUrl": "https://www.bing.com/news/search?q=top+stories&form=TNSA02",
+  "value": [
+    {
+      "_type": "NewsArticle",
+      "name": "Washington Post: In call, Trump demands Georgia official 'find' votes to tilt election ",
+      "url": "https://www.msn.com/en-us/news/politics/in-call-trump-demands-georgia-official-find-votes-to-tilt-election/ar-BB1crhIC",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.lM-sXwiefnRRbtXYwC94lS&pid=News",
+          "width": 600,
+          "height": 315
+        },
+        "isLicensed": true
+      },
+      "description": "President Donald Trump pushed Georgia Secretary of State Brad Raffensperger to \"find\" votes to overturn the election results after his loss to President-elect Biden, according to an audio recording",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "CNN",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_34c0b98797bce395c518158cf055747c"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-03T22:30:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "Pelosi wins tight race for House speaker ",
+      "url": "http://www.msn.com/en-us/news/politics/pelosi-wins-tight-race-for-house-speaker/ar-BB1cqNyo",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.015mAnexRicXOufuYM29py&pid=News",
+          "width": 1200,
+          "height": 630
+        },
+        "isLicensed": true
+      },
+      "description": "The House of Representatives has narrowly reelected Nancy Pelosi as speaker, after the California Democrat received 216 votes. The result was announced with fanfare at 4:49 p.m. by the House Clerk,",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "ABC News",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_0cfcddaa71cae000b74e3bf52bc84d78"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-03T22:00:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "Podcast helps save Curtis Flowers from death row ",
+      "url": "https://www.msn.com/en-us/news/crime/podcast-helps-save-curtis-flowers-from-death-row/ar-BB1cruXf",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.ausM24Fl4Wx-qjt76IJj9C&pid=News",
+          "width": 1200,
+          "height": 630
+        },
+        "isLicensed": true
+      },
+      "description": "Curtis Flowers spent nearly half his life in prison for the murders of four people and may still be on death row if not for the investigative work of a podcast.",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "CBS News",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_4ae1aeddeaac21a710cf413c2980e769"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-04T00:46:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "U.S. may cut some Moderna vaccine doses in half to speed rollout, official says ",
+      "url": "https://www.msn.com/en-us/news/us/us-may-cut-some-moderna-vaccine-doses-in-half-to-speed-rollout-official-says/ar-BB1crfAS",
+      "description": "The U.S. government is considering giving some people half the dose of Moderna's COVID-19 vaccine in order to speed vaccinations, a federal official said on Sunday. Moncef Slaoui, head of Operation",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "Reuters",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_62e71bb461e92ae25d37bed673fc53b9"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-03T21:16:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "Woman killed, 3 deputies wounded in shooting outside nightclub ",
+      "url": "http://www.msn.com/en-us/news/crime/woman-killed-3-deputies-wounded-in-shooting-outside-nightclub/ar-BB1cqO3N",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.2VrmyTKXMPoR1SejiFAT1y&pid=News",
+          "width": 1200,
+          "height": 630
+        },
+        "isLicensed": true
+      },
+      "description": "A woman was killed and three sheriff's deputies were wounded when a gunman opened fire early Sunday during a fight in the parking lot of a Houston nightclub, authorities said.   The shooting erupted",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "ABC News",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_0cfcddaa71cae000b74e3bf52bc84d78"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-03T18:52:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "Biden inauguration to feature virtual, nationwide parade ",
+      "url": "http://www.msn.com/en-us/news/politics/biden-inauguration-to-feature-virtual-nationwide-parade/ar-BB1crsGv",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.Sf03aP2dl82Rku6nOlV-8C&pid=News",
+          "width": 1200,
+          "height": 630
+        },
+        "isLicensed": true
+      },
+      "description": "WASHINGTON (AP) — President-elect Joe Biden's inauguration will include a \"virtual parade across America” consistent with crowd limits during the coronavirus era, organizers announced Sunday.",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "Associated Press",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AMMS_6c39d1938749f17b7db3d338632af3cb"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-04T00:10:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "Asia shares start new year in upbeat mood, much already priced in ",
+      "url": "https://www.msn.com/en-us/money/markets/asia-shares-start-new-year-in-upbeat-mood-much-already-priced-in/ar-BB1crdPX",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.00dr3bvGQ9ijn5FGC1OJDS&pid=News",
+          "width": 1200,
+          "height": 630
+        },
+        "isLicensed": true
+      },
+      "description": "Asian share markets hit pause on Monday as reports of a possible tightening in coronavirus emergency rules for Tokyo pulled Japanese stocks off 30-year highs, while also lifting the safe-haven yen.",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "Reuters",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_62e71bb461e92ae25d37bed673fc53b9"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-04T00:34:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "Pope criticizes people going on holiday to avoid Covid-19 lockdowns ",
+      "url": "https://www.msn.com/en-us/news/world/pope-criticizes-people-going-on-holiday-to-avoid-covid-19-lockdowns/ar-BB1cr2EJ",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.iFt7nGxEcQrmIQPu43UlyC&pid=News",
+          "width": 600,
+          "height": 315
+        },
+        "isLicensed": true
+      },
+      "description": "Pope Francis has condemned people who traveled abroad for a vacation and avoid Covid-19 lockdowns, adding that holidaymakers were not considering the effect of their actions on others.",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "CNN",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_34c0b98797bce395c518158cf055747c"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-03T15:50:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "'Pivotal moment' as Britain set to roll out AstraZeneca vaccine ",
+      "url": "https://www.msn.com/en-us/news/world/pivotal-moment-as-britain-set-to-roll-out-astrazeneca-vaccine/ar-BB1crj56",
+      "description": "Britain will become the first country to roll out the low cost and easily transportable AstraZeneca and Oxford University COVID-19 vaccine on Monday, another step forward in the global response to",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "Reuters",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_62e71bb461e92ae25d37bed673fc53b9"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-04T00:01:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "New Congress updates: GOP lawmaker objects to fellow lawmakers being seated due to Trump's fraud claims ",
+      "url": "https://www.msn.com/en-us/news/politics/new-congress-updates-gop-lawmaker-objects-to-fellow-lawmakers-being-seated-due-to-trumps-fraud-claims/ar-BB1cr4FL",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.cSPqZBxZ2C2ii07buCowiS&pid=News",
+          "width": 1200,
+          "height": 630
+        },
+        "isLicensed": true
+      },
+      "description": "House and Senate lawmakers are sworn in Sunday, the start of a new Congress tasked with working with the Biden administration and fighting COVID-19.",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "USA TODAY",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_e1f4ddfe292e1858eda89344172946a9"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-04T00:24:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "US coronavirus: California reports more than 45,000 new coronavirus cases as surge continues into new year ",
+      "url": "https://www.msn.com/en-us/news/us/us-coronavirus-california-reports-more-than-45-000-new-coronavirus-cases-as-surge-continues-into-new-year/ar-BB1cqS0R",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.rQLMIOIN24lsYBmDJEV6VC&pid=News",
+          "width": 600,
+          "height": 315
+        },
+        "isLicensed": true
+      },
+      "description": "California reported Sunday that 45,352 people newly tested positive for Covid-19, continuing a surge that has pushed hospitals and their exhausted staff to the brink.",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "CNN",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_34c0b98797bce395c518158cf055747c"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-03T19:50:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "Gottlieb says feds should expand vaccine eligibility to speed up pace of shots ",
+      "url": "https://www.msn.com/en-us/news/us/gottlieb-says-feds-should-expand-vaccine-eligibility-to-speed-up-pace-of-shots/ar-BB1cr6Kl",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.AfbFTeDQmxeYOdPqtHE_3S&pid=News",
+          "width": 1200,
+          "height": 630
+        },
+        "isLicensed": true
+      },
+      "description": "Scott Gottlieb, former chief of the Food and Drug Administration, said the vaccine should be made it available for 75 and above first, followed by 70 and older, and 65 and above.",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "CBS News",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_4ae1aeddeaac21a710cf413c2980e769"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-03T17:39:00.0000000Z"
+    }
+  ]
+}
