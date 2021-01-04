@@ -6,4 +6,6 @@ git clone https://github.com/MettyS/yamma-server-proxy.git
 
 npm install
 
-npm run dev - npm start is not currently configured with nodemon to ignore output file changes
+touch .env <- check discord in #resources for the variables to paste here
+
+npm run dev <- npm start is not currently configured with nodemon to ignore output file changes

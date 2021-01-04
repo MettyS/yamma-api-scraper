@@ -1,5 +1,6 @@
 const fs = require('fs');
 const fetch = require('node-fetch');
+const { RAPID_API_KEY, RAPID_API_HOST } = require('./config');
 
 // helper function to write data to file so we can see data format
 const writeOutput = (res) => {
@@ -89,9 +90,8 @@ class BingNewsApiRoute {
           method: 'GET',
           headers: {
             'x-bingapis-sdk': 'true',
-            'x-rapidapi-key':
-              '5da2ae0b98msha23715ba207f2ddp1e59cejsnafe17b1f6602',
-            'x-rapidapi-host': 'bing-news-search1.p.rapidapi.com',
+            'x-rapidapi-key': `${RAPID_API_KEY}`,
+            'x-rapidapi-host': `${RAPID_API_HOST}`,
             'Content-Type': 'application/json',
           },
         }
