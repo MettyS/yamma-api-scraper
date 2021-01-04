@@ -1,0 +1,346 @@
+{
+  "_type": "News",
+  "webSearchUrl": "https://www.bing.com/news/search?q=top+stories&form=TNSA02",
+  "value": [
+    {
+      "_type": "NewsArticle",
+      "name": "Trump turns up heat on Georgia Republican in fight to overturn election loss ",
+      "url": "https://www.msn.com/en-us/news/politics/georgia-election-guardian-raffensperger-faces-heat-as-trump-contests-defeat/ar-BB1crdvX",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.LpnL6Fu2Stxd7nc1KYKzLS&pid=News",
+          "width": 1200,
+          "height": 630
+        },
+        "isLicensed": true
+      },
+      "description": "Georgia's Republican secretary of state, Brad Raffensperger, cemented his status as an unlikely hero for U.S. Democrats following a fresh clash in which he rejected President Donald Trump's claims",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "Reuters",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_62e71bb461e92ae25d37bed673fc53b9"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-03T23:41:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "'Her toughest test yet': Nancy Pelosi to wield speaker's gavel with thin majority in what may be her last term ",
+      "url": "https://www.msn.com/en-us/news/politics/her-toughest-test-yet-nancy-pelosi-to-wield-speakers-gavel-with-thin-majority-in-what-may-be-her-last-term/ar-BB1cq2uB",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.0-Hm47Iq2672KI6I6Z-Oli&pid=News",
+          "width": 1200,
+          "height": 630
+        },
+        "isLicensed": true
+      },
+      "description": "House Speaker Nancy Pelosi is set to take the gavel one last time Sunday as the House elects who will lead them through the start of a post-Trump era.",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "USA TODAY",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_e1f4ddfe292e1858eda89344172946a9"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-03T14:36:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "U.S. may cut some Moderna vaccine doses in half to speed rollout, official says ",
+      "url": "https://www.msn.com/en-us/news/us/us-may-cut-some-moderna-vaccine-doses-in-half-to-speed-rollout-official-says/ar-BB1crfAS",
+      "description": "The U.S. government is considering giving some people half the dose of Moderna's COVID-19 vaccine in order to speed vaccinations, a federal official said on Sunday. Moncef Slaoui, head of Operation",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "Reuters",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_62e71bb461e92ae25d37bed673fc53b9"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-03T21:16:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "New Congress updates: GOP lawmaker objects to fellow lawmakers being seated due to Trump's fraud claims ",
+      "url": "https://www.msn.com/en-us/news/politics/new-congress-updates-gop-lawmaker-objects-to-fellow-lawmakers-being-seated-due-to-trumps-fraud-claims/ar-BB1cr4FL",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.cSPqZBxZ2C2ii07buCowiS&pid=News",
+          "width": 1200,
+          "height": 630
+        },
+        "isLicensed": true
+      },
+      "description": "House and Senate lawmakers are sworn in Sunday, the start of a new Congress tasked with working with the Biden administration and fighting COVID-19.",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "USA TODAY",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_e1f4ddfe292e1858eda89344172946a9"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-04T00:24:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "New U.S. Congress faces tricky course amid political uncertainty ",
+      "url": "https://www.msn.com/en-us/news/politics/new-us-congress-faces-tricky-course-amid-political-uncertainty/ar-BB1cr50B",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.qzecECnWnpKxla3dV9Wn-y&pid=News",
+          "width": 1200,
+          "height": 630
+        },
+        "isLicensed": true
+      },
+      "description": "A new U.S. Congress convened on Sunday in an atmosphere of political uncertainty, with Senate control undecided, a smaller Democratic majority in the House of Representatives and a Republican fight",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "Reuters",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_62e71bb461e92ae25d37bed673fc53b9"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-03T14:26:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "Pelosi wins tight race for House speaker ",
+      "url": "http://www.msn.com/en-us/news/politics/pelosi-wins-tight-race-for-house-speaker/ar-BB1cqNyo",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.015mAnexRicXOufuYM29py&pid=News",
+          "width": 1200,
+          "height": 630
+        },
+        "isLicensed": true
+      },
+      "description": "The House of Representatives has narrowly reelected Nancy Pelosi as speaker, after the California Democrat received 216 votes. The result was announced with fanfare at 4:49 p.m. by the House Clerk,",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "ABC News",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_0cfcddaa71cae000b74e3bf52bc84d78"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-03T22:00:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "U.S. Senate control, and Biden's agenda, at stake as Georgia runoff elections loom ",
+      "url": "https://www.msn.com/en-us/news/politics/us-senate-control-and-bidens-agenda-at-stake-as-georgia-runoff-elections-loom/ar-BB1cqPYt",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.VzHBIcUNRVrGo0xmdQ69IS&pid=News",
+          "width": 1200,
+          "height": 630
+        },
+        "isLicensed": true
+      },
+      "description": "Control of the U.S. Senate – and with it, the likely fate of President-elect Joe Biden's legislative agenda – will be on the ballot on Tuesday when voters in Georgia decide twin runoff elections.  ",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "Reuters",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_62e71bb461e92ae25d37bed673fc53b9"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-03T11:05:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "Woman killed, 3 deputies wounded in shooting outside nightclub ",
+      "url": "http://www.msn.com/en-us/news/crime/woman-killed-3-deputies-wounded-in-shooting-outside-nightclub/ar-BB1cqO3N",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.2VrmyTKXMPoR1SejiFAT1y&pid=News",
+          "width": 1200,
+          "height": 630
+        },
+        "isLicensed": true
+      },
+      "description": "A woman was killed and three sheriff's deputies were wounded when a gunman opened fire early Sunday during a fight in the parking lot of a Houston nightclub, authorities said.   The shooting erupted",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "ABC News",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_0cfcddaa71cae000b74e3bf52bc84d78"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-03T18:52:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "WikiLeaks founder Assange to hear UK judge's ruling on extradition to US ",
+      "url": "https://www.msn.com/en-us/news/world/wikileaks-founder-assange-to-hear-uk-judges-ruling-on-extradition-to-us/ar-BB1crny8",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.DJaiyPtbFEOhgXe4VSGCYi&pid=News",
+          "width": 1200,
+          "height": 630
+        },
+        "isLicensed": true
+      },
+      "description": "WikiLeaks founder Julian Assange will learn on Monday whether a British judge has approved his extradition to the United States to face charges including espionage over the release of secret U.S.",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "Reuters",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_62e71bb461e92ae25d37bed673fc53b9"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-04T00:09:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "Biden inauguration to feature virtual, nationwide parade ",
+      "url": "https://www.msn.com/en-us/news/politics/biden-inauguration-to-feature-virtual-nationwide-parade/ar-BB1crsGv",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.Sf03aP2dl82Rku6nOlV-8C&pid=News",
+          "width": 1200,
+          "height": 630
+        },
+        "isLicensed": true
+      },
+      "description": "WASHINGTON (AP) — President-elect Joe Biden's inauguration will include a \"virtual parade across America” consistent with crowd limits during the coronavirus era, organizers announced Sunday.",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "Associated Press",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AMMS_6c39d1938749f17b7db3d338632af3cb"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-04T00:10:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "'Pivotal moment' as Britain set to roll out AstraZeneca vaccine ",
+      "url": "https://www.msn.com/en-us/news/world/pivotal-moment-as-britain-set-to-roll-out-astrazeneca-vaccine/ar-BB1crj56",
+      "description": "Britain will become the first country to roll out the low cost and easily transportable AstraZeneca and Oxford University COVID-19 vaccine on Monday, another step forward in the global response to",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "Reuters",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_62e71bb461e92ae25d37bed673fc53b9"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-04T00:01:00.0000000Z"
+    },
+    {
+      "_type": "NewsArticle",
+      "name": "Pope criticizes people going on holiday to avoid Covid-19 lockdowns ",
+      "url": "https://www.msn.com/en-us/news/world/pope-criticizes-people-going-on-holiday-to-avoid-covid-19-lockdowns/ar-BB1cr2EJ",
+      "image": {
+        "_type": "ImageObject",
+        "thumbnail": {
+          "_type": "ImageObject",
+          "contentUrl": "https://www.bing.com/th?id=OVFT.iFt7nGxEcQrmIQPu43UlyC&pid=News",
+          "width": 600,
+          "height": 315
+        },
+        "isLicensed": true
+      },
+      "description": "Pope Francis has condemned people who traveled abroad for a vacation and avoid Covid-19 lockdowns, adding that holidaymakers were not considering the effect of their actions on others.",
+      "provider": [
+        {
+          "_type": "Organization",
+          "name": "CNN",
+          "image": {
+            "_type": "ImageObject",
+            "thumbnail": {
+              "_type": "ImageObject",
+              "contentUrl": "https://www.bing.com/th?id=AR_34c0b98797bce395c518158cf055747c"
+            }
+          }
+        }
+      ],
+      "datePublished": "2021-01-03T15:50:00.0000000Z"
+    }
+  ]
+}
