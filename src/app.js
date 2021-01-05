@@ -4,6 +4,7 @@ const morgan = require('morgan');
 const cors = require('cors');
 const helmet = require('helmet');
 const NewsAPI = require('newsapi');
+const TestServiceApi = require('./services/test-service-api');
 
 //const { createProxyMiddleware } = require('http-proxy-middleware');
 
@@ -48,7 +49,10 @@ const rl = readline.createInterface({
 console.log(`Type 'start' to mount the bingapi OR type 'stop' to unmount the bingapi`);
 rl.on('line', (input) => {
   if(input === 'start'){
-    bingRoute.mount();
+    if(NODE_ENV === 'dev_test')
+      TestServiceApi.sendTestEvent();
+    else
+      bingRoute.mount();
   }
   else if(input === 'stop'){
     bingRoute.unMount(bingRoute);

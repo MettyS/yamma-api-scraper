@@ -6,6 +6,7 @@
   "scripts": {
     "test": "mocha --require test/setup.js --watch",
     "dev": "nodemon --ignore './output/' src/server.js",
+    "devFix": "NODE_ENV=dev_test nodemon --ignore './output/' src/server.js",
     "start": "nodemon src/server.js",
     "predeploy": "npm audit",
     "deploy": "git push heroku master",
