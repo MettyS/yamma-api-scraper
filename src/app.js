@@ -29,16 +29,20 @@ app.use(express.static('public'));
 // *************
 
 // import the route
-const BingNewsApiRoute = require('./bing-news-api-route');
+const BingNewsApi = require('./bing-news-api');
 // make new route instance
 // -- OPTIONAL PARAMS -- 
 // BOOLEAN 'running' - should the route should mount during instantiation (DEFAULT false), 
 // INT 'intervalSizeInMin' - how many minutes between fetch to BingNewsApi (DEFAULT 1 min), 
 // INT 'timeOutSizeInMin' - how many minutes until unmount (DEFAULT 1 min)
-const bingRoute = new BingNewsApiRoute();
+const bingRoute = new BingNewsApi();
 // excited console logs
 console.log('JUST MADE A ROUTER, GOING TO MOUNT IT NOW');
 // mount the route
+const usWest = 'count=100&mkt=en-US&safeSearch=Off&category=US_West&headlineCount=100&'
+bingRoute.setQParams(usWest);
+
+
 bingRoute.mount();
 
 

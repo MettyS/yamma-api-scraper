@@ -2,6 +2,24 @@ const fs = require('fs');
 const fetch = require('node-fetch');
 const { RAPID_API_KEY, RAPID_API_HOST } = require('./config');
 
+fetch("https://bing-news-search1.p.rapidapi.com/news?&textFormat=Raw", {
+	"method": "GET",
+	"headers": {
+		"x-bingapis-sdk": "true",
+		"x-rapidapi-key": "5da2ae0b98msha23715ba207f2ddp1e59cejsnafe17b1f6602",
+		"x-rapidapi-host": "bing-news-search1.p.rapidapi.com"
+	}
+})
+.then(response => {
+	console.log(response);
+})
+.catch(err => {
+	console.error(err);
+});
+
+
+
+
 // helper function to write data to file so we can see data format
 const writeOutput = (res) => {
   let time = new Date(); 
@@ -24,12 +42,13 @@ const writeOutput = (res) => {
 // we pass 'this' as a 3rd parameter in a respective call and it is
 // passed to the anonymous function as 'router'
 
-class BingNewsApiRoute {
+class BingNewsApi {
 
-  constructor(running = false, intervalSizeInMin = 1, timeOutSizeInMin = 1) {
+  constructor(running = false, intervalSizeInMin = 1, timeOutSizeInMin = 1
+              , queryParams = 'textDecorations=false&count=100&mkt=en-US&') {
     this.running = running;
     // default query params
-    this.queryParams = 'textDecorations=false&count=100&mkt=en-US&';
+    this.queryParams = queryParams;
     this.minutesPassed = 1;
     this.intervalSizeInMin = intervalSizeInMin;
     this.timeOutSizeInMin = timeOutSizeInMin;
@@ -38,6 +57,10 @@ class BingNewsApiRoute {
     // if class instance constructed with running, mount the instance
     if(this.running)
       this.mount();
+  }
+
+  setQParams(queryParams) {
+    this.queryParams = queryParams;
   }
 
   // Mount the instance
@@ -131,4 +154,4 @@ class BingNewsApiRoute {
   }
 }
 
-module.exports = BingNewsApiRoute;
+module.exports = BingNewsApi;
