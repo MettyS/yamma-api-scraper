@@ -1,22 +1,7 @@
 const fs = require('fs');
 const fetch = require('node-fetch');
 const { RAPID_API_KEY, RAPID_API_HOST } = require('./config');
-
-fetch("https://bing-news-search1.p.rapidapi.com/news?&textFormat=Raw", {
-	"method": "GET",
-	"headers": {
-		"x-bingapis-sdk": "true",
-		"x-rapidapi-key": "5da2ae0b98msha23715ba207f2ddp1e59cejsnafe17b1f6602",
-		"x-rapidapi-host": "bing-news-search1.p.rapidapi.com"
-	}
-})
-.then(response => {
-	console.log(response);
-})
-.catch(err => {
-	console.error(err);
-});
-
+const YammaApiService = require('./services/yamma-api-service');
 
 
 
@@ -128,7 +113,9 @@ class BingNewsApi {
           console.log('writing output..');
           writeOutput(JSON.stringify(res));
 
-          console.log('GOT THE RESPONSE!!!!!!!!!!!!! : ');
+          console.log('passing bing res to yammaapiservice...');
+          YammaApiService.sendEvents(res, 'US_West');
+
         })
         .catch((er) => {
           console.error(er);
@@ -137,7 +124,7 @@ class BingNewsApi {
       // the interval is 'intervalSizeMultiplier * 1 min'
       // 60000 milliseconds = 1 minute
       // NOTE -> see line 19
-    }, this.intervalSizeInMin * 60000, this);
+    }, this.intervalSizeInMin * 10000, this);
 
 
 
@@ -149,7 +136,7 @@ class BingNewsApi {
 
     // the interval is 'intervalSizeMultiplier * 1 min'
     // 60000 milliseconds = 1 minute
-    }, this.timeOutSizeInMin * 60000, this);
+    }, this.timeOutSizeInMin * 10000, this);
 
   }
 }

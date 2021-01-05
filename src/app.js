@@ -36,14 +36,32 @@ const BingNewsApi = require('./bing-news-api');
 // INT 'intervalSizeInMin' - how many minutes between fetch to BingNewsApi (DEFAULT 1 min), 
 // INT 'timeOutSizeInMin' - how many minutes until unmount (DEFAULT 1 min)
 const bingRoute = new BingNewsApi();
-// excited console logs
-console.log('JUST MADE A ROUTER, GOING TO MOUNT IT NOW');
-// mount the route
 const usWest = 'count=100&mkt=en-US&safeSearch=Off&category=US_West&headlineCount=100&'
 bingRoute.setQParams(usWest);
 
+const readline = require("readline");
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 
-bingRoute.mount();
+console.log(`Type 'start' to mount the bingapi OR type 'stop' to unmount the bingapi`);
+rl.on('line', (input) => {
+  if(input === 'start'){
+    bingRoute.mount();
+  }
+  else if(input === 'stop'){
+    bingRoute.unMount(bingRoute);
+  }
+  else {
+    console.log(`Type 'start' to mount the bingapi OR type 'stop' to unmount the bingapi`);
+  }
+});
+
+rl.on("close", function() {
+    console.log("\n-------------------------------------> sending process, bye now!");
+    process.exit(0);
+});
 
 
 
