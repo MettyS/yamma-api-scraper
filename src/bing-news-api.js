@@ -3,13 +3,12 @@ const fetch = require('node-fetch');
 const { RAPID_API_KEY, RAPID_API_HOST } = require('./config');
 const YammaApiService = require('./services/yamma-api-service');
 
-
-
 // helper function to write data to file so we can see data format
 const writeOutput = (res) => {
-  let time = new Date(); 
-  const timeString = `${time.getDate()}_${(time.getMonth()+1)}_${time.getFullYear()}`
-                    +`@${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`;
+  let time = new Date();
+  const timeString =
+    `${time.getDate()}_${time.getMonth() + 1}_${time.getFullYear()}` +
+    `@${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`;
 
   fs.appendFile(`./output/bing_output_${timeString}.json`, res, (err) => {
     if (err) {
@@ -28,9 +27,12 @@ const writeOutput = (res) => {
 // passed to the anonymous function as 'router'
 
 class BingNewsApi {
-
-  constructor(running = false, intervalSizeInMin = 1, timeOutSizeInMin = 1
-              , queryParams = 'textDecorations=false&count=100&mkt=en-US&') {
+  constructor(
+    running = false,
+    intervalSizeInMin = 1,
+    timeOutSizeInMin = 1,
+    queryParams = 'textDecorations=false&count=100&mkt=en-US&'
+  ) {
     this.running = running;
     // default query params
     this.queryParams = queryParams;
@@ -40,8 +42,7 @@ class BingNewsApi {
     this.interval;
 
     // if class instance constructed with running, mount the instance
-    if(this.running)
-      this.mount();
+    if (this.running) this.mount();
   }
 
   setQParams(queryParams) {
@@ -64,7 +65,7 @@ class BingNewsApi {
       clearInterval(router.interval);
       console.log('unmounted bing, setting running to false');
       router.running = false;
-    } 
+    }
     // if there is no interval loop, this call was a mistake
     else {
       console.log(
@@ -75,7 +76,6 @@ class BingNewsApi {
   }
 
   async fetchContent() {
-
     // if not running, then not properly mounted. exit function
     if (!this.running) {
       console.log('mistakenly trying to start fetch... quitting now!');
@@ -84,60 +84,66 @@ class BingNewsApi {
 
     // set this.interval to be a new interval
     // NOTE -> see line 19
-    this.interval = setInterval(function (router) {
-      // print and increment minutes passed
-      console.log(`${router.minutesPassed} MINUTES HAVE PASSED, FETCHING NOW`);
-      router.minutesPassed += 1;
+    this.interval = setInterval(
+      function (router) {
+        // print and increment minutes passed
+        console.log(
+          `${router.minutesPassed} MINUTES HAVE PASSED, FETCHING NOW`
+        );
+        router.minutesPassed += 1;
 
-      // check the queryParams
-      console.log('the query params are: ', router.queryParams);
+        // check the queryParams
+        console.log('the query params are: ', router.queryParams);
 
-      fetch(
-        `https://bing-news-search1.p.rapidapi.com/news?${router.queryParams}safeSearch=Off&textFormat=Raw`,
-        {
-          method: 'GET',
-          headers: {
-            'x-bingapis-sdk': 'true',
-            'x-rapidapi-key': `${RAPID_API_KEY}`,
-            'x-rapidapi-host': `${RAPID_API_HOST}`,
-            'Content-Type': 'application/json',
-          },
-        }
-      )
-        .then((res) => {
-          // convert res to json
-          return res.json();
-        })
-        .then((res) => {
-          // call helper to store the response
-          console.log('writing output..');
-          writeOutput(JSON.stringify(res));
+        fetch(
+          `https://bing-news-search1.p.rapidapi.com/news?${router.queryParams}safeSearch=Off&textFormat=Raw`,
+          {
+            method: 'GET',
+            headers: {
+              'x-bingapis-sdk': 'true',
+              'x-rapidapi-key': `${RAPID_API_KEY}`,
+              'x-rapidapi-host': `${RAPID_API_HOST}`,
+              'Content-Type': 'application/json',
+            },
+          }
+        )
+          .then((res) => {
+            // convert res to json
+            return res.json();
+          })
+          .then((res) => {
+            // call helper to store the response
+            console.log('writing output..');
+            writeOutput(JSON.stringify(res));
 
-          console.log('passing bing res to yammaapiservice...');
-          YammaApiService.sendEvents(res, 'US_West');
+            console.log('passing bing res to yammaapiservice...');
+            YammaApiService.sendEvents(res, 'US_West');
+          })
+          .catch((er) => {
+            console.error(er);
+          });
 
-        })
-        .catch((er) => {
-          console.error(er);
-        });
+        // the interval is 'intervalSizeMultiplier * 1 min'
+        // 60000 milliseconds = 1 minute
+        // NOTE -> see line 19
+      },
+      this.intervalSizeInMin * 10000,
+      this
+    );
 
-      // the interval is 'intervalSizeMultiplier * 1 min'
-      // 60000 milliseconds = 1 minute
-      // NOTE -> see line 19
-    }, this.intervalSizeInMin * 10000, this);
-
-
-
-    // set the timeout 
+    // set the timeout
     // (basically a counter in the background that will run one time when it reaches the count)
     // NOTE -> see line 19
-    setTimeout(function(router) {
-      router.unMount(router);
+    setTimeout(
+      function (router) {
+        router.unMount(router);
 
-    // the interval is 'intervalSizeMultiplier * 1 min'
-    // 60000 milliseconds = 1 minute
-    }, this.timeOutSizeInMin * 10000, this);
-
+        // the interval is 'intervalSizeMultiplier * 1 min'
+        // 60000 milliseconds = 1 minute
+      },
+      this.timeOutSizeInMin * 10000,
+      this
+    );
   }
 }
 

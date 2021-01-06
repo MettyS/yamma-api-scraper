@@ -3,12 +3,9 @@ const { YAMMA_API_ENDPOINT } = require('../config');
 
 const EventService = {
   processEvents(events, defaultCategory) {
-    return events.map(uEvent => {
-      return (
-        this.formatFetchEvent(uEvent, defaultCategory)
-      );
-    })
-
+    return events.map((uEvent) => {
+      return this.formatFetchEvent(uEvent, defaultCategory);
+    });
   },
   formatFetchEvent(uEvent, defaultCategory) {
     const fEvent = {
@@ -19,20 +16,17 @@ const EventService = {
       source_name: uEvent.provider[0].name,
       source_url: uEvent.url,
       source_img: uEvent.provider[0].image.thumbnail.contentUrl,
-      date_published: uEvent.datePublished
-    }
+      date_published: uEvent.datePublished,
+    };
 
     return fetch(`${YAMMA_API_ENDPOINT}`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
       },
-      body: JSON.stringify({ event: fEvent })
-      
-    })
+      body: JSON.stringify({ event: fEvent }),
+    });
   },
-  
-}
-
+};
 
 module.exports = EventService;
