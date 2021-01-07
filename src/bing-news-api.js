@@ -40,6 +40,8 @@ class BingNewsApi {
     this.intervalSizeInMin = intervalSizeInMin;
     this.timeOutSizeInMin = timeOutSizeInMin;
     this.interval;
+    this.category = 'US';
+
 
     // if class instance constructed with running, mount the instance
     if (this.running) this.mount();
@@ -47,6 +49,14 @@ class BingNewsApi {
 
   setQParams(queryParams) {
     this.queryParams = queryParams;
+    this.setCategory();
+  }
+
+  setCategory() {
+    const regexPattern = /((?<=category=).*?(?=&))/
+    const category = this.queryParams.match(regexPattern);
+    if(category)
+      this.category = category;
   }
 
   // Mount the instance
@@ -96,7 +106,7 @@ class BingNewsApi {
         console.log('the query params are: ', router.queryParams);
 
         fetch(
-          `https://bing-news-search1.p.rapidapi.com/news?${router.queryParams}safeSearch=Off&textFormat=Raw`,
+          `https://bing-news-search1.p.rapidapi.com/news?count=100&mkt=en-US&safeSearch=Off&${router.queryParams}&headlineCount=100&textFormat=Raw`,
           {
             method: 'GET',
             headers: {
@@ -117,7 +127,7 @@ class BingNewsApi {
             writeOutput(JSON.stringify(res));
 
             console.log('passing bing res to yammaapiservice...');
-            YammaApiService.sendEvents(res, 'US_West');
+            YammaApiService.sendEvents(res, router.category);
           })
           .catch((er) => {
             console.error(er);
