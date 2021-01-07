@@ -8,24 +8,33 @@ const EventService = {
     });
   },
   formatFetchEvent(uEvent, defaultCategory) {
-    const fEvent = {
-      title: uEvent.name,
-      categories: defaultCategory,
-      description: uEvent.description,
-      event_img: uEvent.image.thumbnail.contentUrl,
-      source_name: uEvent.provider[0].name,
-      source_url: uEvent.url,
-      source_img: uEvent.provider[0].image.thumbnail.contentUrl,
-      date_published: uEvent.datePublished,
-    };
+    try{
+      console.log('the provider array is: ', uEvent.provider);
+      //console.log('the event image is: ', uEvent.image);
 
-    return fetch(`${YAMMA_API_ENDPOINT}`, {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-      },
-      body: JSON.stringify({ event: fEvent }),
-    });
+      const fEvent = {
+        title: uEvent.name,
+        categories: defaultCategory,
+        description: uEvent.description,
+        event_img: uEvent.image.thumbnail.contentUrl,
+        source_name: uEvent.provider[0].name,
+        source_url: uEvent.url,
+        source_img: uEvent.provider[0].image ? uEvent.provider[0].image.thumbnail.contentUrl : 'no image',
+        date_published: uEvent.datePublished,
+      };
+
+      return fetch(`${YAMMA_API_ENDPOINT}`, {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json',
+        },
+        body: JSON.stringify({ event: fEvent }),
+      });
+    }
+    catch(er) {
+      console.log('there was an error with this unformatted event: ', uEvent);
+      return { error: er }
+    }
   },
 };
 

@@ -3,10 +3,18 @@ const EventService = require('./event-service');
 
 const YammaApiService = {
   async sendEvents(eventRes, category) {
-    const events = eventRes.value;
+    if(eventRes.errors){
+      console.log('invalid request made to bing');
+      return;
+    }
 
-    EventService.processEvents(events, category).forEach((req) => {
-      this.handlePromise(req);
+    
+    const events = eventRes.value;
+    const formattedEvents = EventService.processEvents(events, category);
+    
+    formattedEvents.forEach((req) => {
+      if(!req.error)
+        this.handlePromise(req);
     });
   },
 
@@ -14,7 +22,7 @@ const YammaApiService = {
     eventPromise
       .then((res) => res.json())
       .then((res) => {
-        console.log('no error: ', res);
+        console.log('no error');
       })
       .catch((er) => {
         console.log('ERROR: ', er);

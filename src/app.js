@@ -36,9 +36,21 @@ const BingNewsApi = require('./bing-news-api');
 // INT 'intervalSizeInMin' - how many minutes between fetch to BingNewsApi (DEFAULT 1 min),
 // INT 'timeOutSizeInMin' - how many minutes until unmount (DEFAULT 1 min)
 const bingRoute = new BingNewsApi();
-const usWest =
-  'count=100&mkt=en-US&safeSearch=Off&category=US_West&headlineCount=100&';
-bingRoute.setQParams(usWest);
+
+const categories = {
+  usWest: '&category=US_West',
+  usNortheast: '&category=US_Northeast',
+  usSouth: '&category=US_South',
+  usMidwest: '&category=US_Midwest',
+  business: '&category=Business',
+  politics: '&category=Politics',
+  technology: '&category=Technology',
+  science: '&category=Science',
+  health: '&category=Health'
+}
+
+
+bingRoute.setQParams(categories.usWest);
 
 const readline = require('readline');
 const rl = readline.createInterface({
@@ -55,7 +67,12 @@ rl.on('line', (input) => {
     else bingRoute.mount();
   } else if (input === 'stop') {
     bingRoute.unMount(bingRoute);
-  } else {
+  } else if (categories[input]) {
+    console.log('updated category!');
+    bingRoute.setQParams(categories[input])
+  } else if (input === 'help') {
+    console.log('possible options: ', Object.keys(categories))
+  }else {
     console.log(
       `Type 'start' to mount the bingapi OR type 'stop' to unmount the bingapi`
     );
