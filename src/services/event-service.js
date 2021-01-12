@@ -8,8 +8,8 @@ const EventService = {
     });
   },
   formatFetchEvent(uEvent, defaultCategory) {
-    try{
-      console.log('the provider array is: ', uEvent.provider);
+    try {
+      //console.log('the provider array is: ', uEvent.provider);
       //console.log('the event image is: ', uEvent.image);
 
       const fEvent = {
@@ -19,7 +19,9 @@ const EventService = {
         event_img: uEvent.image.thumbnail.contentUrl,
         source_name: uEvent.provider[0].name,
         source_url: uEvent.url,
-        source_img: uEvent.provider[0].image ? uEvent.provider[0].image.thumbnail.contentUrl : 'no image',
+        source_img: uEvent.provider[0].image
+          ? uEvent.provider[0].image.thumbnail.contentUrl
+          : 'no image',
         date_published: uEvent.datePublished,
       };
 
@@ -30,10 +32,9 @@ const EventService = {
         },
         body: JSON.stringify({ event: fEvent }),
       });
-    }
-    catch(er) {
+    } catch (er) {
       console.log('there was an error with this unformatted event: ', uEvent);
-      return { error: er }
+      return { error: er };
     }
   },
 };

@@ -1,6 +1,7 @@
 module.exports = {
   PORT: process.env.PORT || 6000,
   NODE_ENV: process.env.NODE_ENV || 'development',
+  START_UP_MODE: process.env.START_UP_MODE || 'wakeup', // the mode to start the app/bingapi in
   JWT_SECRET: process.env.JWT_SECRET || 'yamma-secret', // TODO
   JWT_EXPIRY: process.env.JWT_EXPIRY || '3h', // TODO
   NEWS_API_KEY: process.env.NEWS_API_KEY || 'dummy-key', // NOT IN USE
