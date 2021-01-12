@@ -27,49 +27,141 @@ const writeOutput = (res) => {
 // passed to the anonymous function as 'router'
 
 class BingNewsApi {
-  constructor(
-    running = false,
-    intervalSizeInMin = 1,
-    timeOutSizeInMin = 1,
-    queryParams = 'textDecorations=false&count=100&mkt=en-US&'
-  ) {
+  constructor(mode = 'commandline', running = false) {
+    this.mode = mode;
     this.running = running;
-    // default query params
-    this.queryParams = queryParams;
-    this.minutesPassed = 1;
-    this.intervalSizeInMin = intervalSizeInMin;
-    this.timeOutSizeInMin = timeOutSizeInMin;
-    this.interval;
-    this.category = 'US';
+    this.category;
+    this.queryParams;
+    this.setCategory('US');
 
+    if (mode === 'commandline') {
+      console.log('BingApi created in mode ---> ', mode);
+      this.interval;
+    } else if (mode === 'wakeup') {
+      console.log('BingApi created in mode ---> ', mode);
+      this.categories = {
+        us: 'US',
+        usWest: 'US_West', //'&category=US_West',
+        usNortheast: 'US_Northeast', //'&category=US_Northeast',
+        usSouth: 'US_South', //'&category=US_South',
+        usMidwest: 'US_Midwest', //'&category=US_Midwest',
+        business: 'Business', //'&category=Business',
+        politics: 'Politics', //'&category=Politics',
+        technology: 'Technology', //'&category=Technology',
+        science: 'Science', //'&category=Science',
+        health: 'Health', //'&category=Health'
+      };
+
+      this.categoryIndex = 0;
+    } else {
+      throw new Error(
+        `Invalid BingApi startup mode: ${mode} . \nValid options: wakeup , commandline`
+      );
+    }
 
     // if class instance constructed with running, mount the instance
     if (this.running) this.mount();
   }
 
-  setQParams(queryParams) {
-    this.queryParams = queryParams;
-    this.setCategory();
+  //update queryparameter string
+  setQParams(category) {
+    this.queryParams = `&category=${category}`;
   }
 
-  setCategory() {
-    const regexPattern = /((?<=category=).*?(?=&))/
-    const category = this.queryParams.match(regexPattern);
-    if(category)
-      this.category = category;
+  setCategory(category) {
+    this.setQParams(category);
+    this.category = category;
   }
 
   // Mount the instance
-  mount() {
-    console.log(
-      'OMGOMGOMGOMGOMGOMGOMGOMG MOUNTING BINGROUTER NOW!!!!!!!!!!!!!!!!!!!!!!'
-    );
+  mount(intervalMult, timeOutMult, categories = null) {
+    if (this.running) {
+      console.log('already running');
+      return;
+    }
+
     this.running = true;
-    this.fetchContent();
+    if (categories && typeof categories === 'object') {
+      console.log('-----> Mounting BingRouter Continuously <-----');
+      const categoriesArray = Object.values(categories);
+      this.mountContinuous(intervalMult, timeOutMult, categoriesArray);
+      return;
+    } else if (intervalMult || timeOutMult || categories) {
+      console.log('Mount Refused : Invalid input for a continuous mount');
+    } else {
+      console.log('-----> Mounting BingRouter Once <-----');
+      this.mountOnce();
+    }
+  }
+
+  // runs for 10 seconds, gets one fetch at the end of 10 seconds
+  mountOnce() {
+    // if not running, then not properly mounted. exit function
+    if (!this.running) {
+      console.log('mistakenly trying to start fetch... quitting now!');
+      return;
+    }
+    this.fetchContent(this);
+    this.running = false;
+  }
+
+  // ***********************
+  //  Wakeup-mode Exclusive
+  // ***********************
+
+  incrementCategory() {
+    const categoryKeys = Object.keys(this.categories);
+    this.categoryIndex =
+      this.categoryIndex + 1 < categoryKeys.length ? this.categoryIndex + 1 : 0;
+
+    const currentCategory = this.categories[categoryKeys[this.categoryIndex]];
+    console.log('CURRENT CATEGORY IS NOW: ', currentCategory);
+    this.setCategory(currentCategory);
+  }
+
+  // **************************
+  // Commandline-mode Exclusive
+  // **************************
+
+  incrementIndex(router, max) {
+    if (router.index)
+      router.index = router.index + 1 >= max ? 0 : router.index + 1;
+    else console.log('tried to increment but you dont have an index!');
+  }
+
+  mountContinuous(intervalMult, timeOutMult, categories) {
+    if (!this.running) {
+      console.log('mistakenly trying to start fetch... quitting now!');
+      return;
+    }
+
+    this.index = 0;
+    this.interval = setInterval(
+      (router, categories) => {
+        router.category = categories[router.index];
+        router.incrementIndex(router, categories.length);
+        router.fetchContent(router);
+      },
+      intervalMult * 60000,
+      this,
+      categories
+    );
+
+    setTimeout(
+      (router) => {
+        router.unMountRouter(router);
+      },
+      timeOutMult * 60000,
+      this
+    );
+  }
+
+  unMount() {
+    this.unMountRouter(this);
   }
 
   // Unmount the instance
-  unMount(router) {
+  unMountRouter(router) {
     // if the router has an interval loop, clear it and stop running
     if (!!router.interval) {
       clearInterval(router.interval);
@@ -85,75 +177,34 @@ class BingNewsApi {
     }
   }
 
-  async fetchContent() {
-    // if not running, then not properly mounted. exit function
-    if (!this.running) {
-      console.log('mistakenly trying to start fetch... quitting now!');
-      return;
-    }
+  async fetchContent(router) {
+    fetch(
+      `https://bing-news-search1.p.rapidapi.com/news?count=100&mkt=en-US&safeSearch=Off&${router.queryParams}&headlineCount=100&textFormat=Raw`,
+      {
+        method: 'GET',
+        headers: {
+          'x-bingapis-sdk': 'true',
+          'x-rapidapi-key': `${RAPID_API_KEY}`,
+          'x-rapidapi-host': `${RAPID_API_HOST}`,
+          'Content-Type': 'application/json',
+        },
+      }
+    )
+      .then((res) => {
+        // convert res to json
+        return res.json();
+      })
+      .then((res) => {
+        // call helper to store the response
+        // console.log('writing output..');
+        // writeOutput(JSON.stringify(res));
 
-    // set this.interval to be a new interval
-    // NOTE -> see line 19
-    this.interval = setInterval(
-      function (router) {
-        // print and increment minutes passed
-        console.log(
-          `${router.minutesPassed} MINUTES HAVE PASSED, FETCHING NOW`
-        );
-        router.minutesPassed += 1;
-
-        // check the queryParams
-        console.log('the query params are: ', router.queryParams);
-
-        fetch(
-          `https://bing-news-search1.p.rapidapi.com/news?count=100&mkt=en-US&safeSearch=Off&${router.queryParams}&headlineCount=100&textFormat=Raw`,
-          {
-            method: 'GET',
-            headers: {
-              'x-bingapis-sdk': 'true',
-              'x-rapidapi-key': `${RAPID_API_KEY}`,
-              'x-rapidapi-host': `${RAPID_API_HOST}`,
-              'Content-Type': 'application/json',
-            },
-          }
-        )
-          .then((res) => {
-            // convert res to json
-            return res.json();
-          })
-          .then((res) => {
-            // call helper to store the response
-            console.log('writing output..');
-            writeOutput(JSON.stringify(res));
-
-            console.log('passing bing res to yammaapiservice...');
-            YammaApiService.sendEvents(res, router.category);
-          })
-          .catch((er) => {
-            console.error(er);
-          });
-
-        // the interval is 'intervalSizeMultiplier * 1 min'
-        // 60000 milliseconds = 1 minute
-        // NOTE -> see line 19
-      },
-      this.intervalSizeInMin * 10000,
-      this
-    );
-
-    // set the timeout
-    // (basically a counter in the background that will run one time when it reaches the count)
-    // NOTE -> see line 19
-    setTimeout(
-      function (router) {
-        router.unMount(router);
-
-        // the interval is 'intervalSizeMultiplier * 1 min'
-        // 60000 milliseconds = 1 minute
-      },
-      this.timeOutSizeInMin * 10000,
-      this
-    );
+        console.log('passing bing res to yammaapiservice...');
+        YammaApiService.sendEvents(res, router.category);
+      })
+      .catch((er) => {
+        console.error(er);
+      });
   }
 }
 

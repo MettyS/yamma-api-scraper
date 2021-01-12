@@ -5,6 +5,7 @@ const YammaApiService = {
   async sendEvents(eventRes, category) {
     if(eventRes.errors){
       console.log('invalid request made to bing');
+      console.log(eventRes);
       return;
     }
 
@@ -22,7 +23,7 @@ const YammaApiService = {
     eventPromise
       .then((res) => res.json())
       .then((res) => {
-        console.log('no error');
+        //console.log('no error');
       })
       .catch((er) => {
         console.log('ERROR: ', er);

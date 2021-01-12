@@ -3,15 +3,18 @@ const express = require('express');
 const morgan = require('morgan');
 const cors = require('cors');
 const helmet = require('helmet');
-const NewsAPI = require('newsapi');
-const TestServiceApi = require('./services/test-service-api');
+const errorHandler = require('./services/error-handler');
 
-//const { createProxyMiddleware } = require('http-proxy-middleware');
+const RlService = require('./services/rl-service');
 
-const { NODE_ENV, NEWS_API_KEY } = require('./config');
+const wakeupRouter = require('./wakeup/wakeup-router');
+const BingNewsApi = require('./bing-news-api');
+
+const { NODE_ENV, START_UP_MODE } = require('./config');
 
 // NOT IN USE
-const newsapi = new NewsAPI(`${NEWS_API_KEY}`);
+// const NewsAPI = require('newsapi');
+// const newsapi = new NewsAPI(`${NEWS_API_KEY}`);
 
 const app = express();
 const morganOption = NODE_ENV === 'production' ? 'tiny' : 'common';
@@ -24,97 +27,85 @@ app.use(cors());
 app.use(helmet());
 app.use(express.static('public'));
 
+const bingApi = new BingNewsApi(START_UP_MODE);
+
+
 // *************
-//  Bing Router
+//  CommandLine
 // *************
 
-// import the route
-const BingNewsApi = require('./bing-news-api');
-// make new route instance
-// -- OPTIONAL PARAMS --
-// BOOLEAN 'running' - should the route should mount during instantiation (DEFAULT false),
-// INT 'intervalSizeInMin' - how many minutes between fetch to BingNewsApi (DEFAULT 1 min),
-// INT 'timeOutSizeInMin' - how many minutes until unmount (DEFAULT 1 min)
-const bingRoute = new BingNewsApi();
+if(START_UP_MODE === 'commandline') {
 
-const categories = {
-  usWest: '&category=US_West',
-  usNortheast: '&category=US_Northeast',
-  usSouth: '&category=US_South',
-  usMidwest: '&category=US_Midwest',
-  business: '&category=Business',
-  politics: '&category=Politics',
-  technology: '&category=Technology',
-  science: '&category=Science',
-  health: '&category=Health'
+  // -- OPTIONAL PARAMS --
+  // BOOLEAN 'running' - should the route should mount during instantiation (DEFAULT false),
+  // INT 'intervalSizeInMin' - how many minutes between fetch to BingNewsApi (DEFAULT 1 min),
+  // INT 'timeOutSizeInMin' - how many minutes until unmount (DEFAULT 1 min)
+
+  const categories = {
+    usWest: 'US_West',//'&category=US_West',
+    usNortheast: 'US_Northeast',//'&category=US_Northeast',
+    usSouth: 'US_South',//'&category=US_South',
+    usMidwest: 'US_Midwest',//'&category=US_Midwest',
+    business: 'Business',//'&category=Business',
+    politics: 'Politics',//'&category=Politics',
+    technology: 'Technology',//'&category=Technology',
+    science: 'Science',//'&category=Science',
+    health: 'Health',//'&category=Health'
+  }
+
+  bingApi.setQParams(categories.usWest);
+
+  const readline = require('readline');
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+    terminal: false,
+  });
+
+  console.log(
+    `Type 'start' to mount the bingapi OR type 'stop' to unmount the bingapi`
+  );
+  rl.on('line', (input) => {
+
+    if(!(RlService.handleStartStop(input, bingApi, categories))
+      && !(RlService.handleCategory(input, bingApi, categories))
+      && !(RlService.handleHelp(input, categories))){
+      console.log(
+        `Type 'start' to mount the bingapi OR type 'stop' to unmount the bingapi\nfor more info type 'help'`
+      );
+    }
+  });
+
+  rl.on('close', function () {
+    console.log(
+      '\n-------------------------------------> sending process, bye now!'
+    );
+    process.exit(0);
+  });
+}
+// *********
+//  Wake Up
+// *********
+else if(START_UP_MODE === 'wakeup'){
+
+  app.use(
+    '/wakeup',
+    function (req, res, next) {
+      req.bingApi = bingApi;
+      next();
+    },
+    wakeupRouter
+  );
 }
 
 
-bingRoute.setQParams(categories.usWest);
-
-const readline = require('readline');
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
-
-console.log(
-  `Type 'start' to mount the bingapi OR type 'stop' to unmount the bingapi`
-);
-rl.on('line', (input) => {
-  if (input === 'start') {
-    if (NODE_ENV === 'dev_test') TestServiceApi.sendTestEvent();
-    else bingRoute.mount();
-  } else if (input === 'stop') {
-    bingRoute.unMount(bingRoute);
-  } else if (categories[input]) {
-    console.log('updated category!');
-    bingRoute.setQParams(categories[input])
-  } else if (input === 'help') {
-    console.log('possible options: ', Object.keys(categories))
-  }else {
-    console.log(
-      `Type 'start' to mount the bingapi OR type 'stop' to unmount the bingapi`
-    );
-  }
-});
-
-rl.on('close', function () {
-  console.log(
-    '\n-------------------------------------> sending process, bye now!'
-  );
-  process.exit(0);
-});
-
-// EXAMPLE PROXY SETUP << NOT IN USE >>
-// Proxy endpoints
-/*
-app.use('/json_placeholder', createProxyMiddleware({
-  target: API_SERVICE_URL,
-  changeOrigin: true,
-  pathRewrite: {
-      [`^/json_placeholder`]: '',
-  },
-}));
-*/
-
-// EXAMPLE NEWS-API USAGE << NOT IN USE >>
-// https://newsapi.org/v2/sources?language=en&country=us&apiKey=0198a68f3fa44a738254b4cdceee5066
-// https://newsapi.org/v2/top-headlines?country=us&apiKey=0198a68f3fa44a738254b4cdceee5066
-/*
-newsapi.v2.topHeadlines({
-  language: 'en',
-  country: 'us',
-  pageSize: 100
-}).then(response => {
-  console.log('got our thing! >>>>>>>>>> ')
-  console.log(response);
-});
-*/
 
 // Sample GET endpoint
-app.get('/info', (req, res, next) => {
-  res.send('This is the proxy service yamma-proxy');
+app.get('/', (req, res, next) => {
+  res.send('This is the api-scraper service for yamma-api-scraper');
 });
+
+
+app.use(errorHandler);
 
 module.exports = app;
