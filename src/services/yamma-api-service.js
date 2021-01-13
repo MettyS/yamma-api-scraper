@@ -3,12 +3,26 @@ const EventService = require('./event-service');
 
 const YammaApiService = {
   async sendEvents(eventRes, category) {
+    if(!eventRes){
+      console.log('eventRes is undefined');
+      return;
+    }
+
+    if(!eventRes.value) {
+      console.log('eventRes.value is undefined, the eventRes is');
+      console.log(eventRes);
+      return;
+    }
+
     if(eventRes.errors){
       console.log('invalid request made to bing');
       console.log(eventRes);
       return;
     }
 
+    eventRes.then( (eventRes) => {
+      console.log('sending events: ');
+      console.log(eventRes);
     
     const events = eventRes.value;
     const formattedEvents = EventService.processEvents(events, category);
@@ -17,6 +31,12 @@ const YammaApiService = {
       if(!req.formatingError)
         this.handlePromise(req);
     });
+    })
+    .catch(er => {
+      console.log(er);
+    })
+
+    
   },
 
   async handlePromise(eventPromise) {
