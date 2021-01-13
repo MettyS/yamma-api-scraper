@@ -10,4 +10,5 @@ module.exports = {
     process.env.RAPID_API_HOST || 'check discord #resources for this',
   YAMMA_API_ENDPOINT:
     process.env.YAMMA_API_ENDPOINT || 'http://localhost:8000/events',
+  YAMMA_AUTH_KEY: process.env.YAMMA_AUTH_KEY || 'check discord #resources'
 };

@@ -179,7 +179,7 @@ class BingNewsApi {
 
   async fetchContent(router) {
     fetch(
-      `https://bing-news-search1.p.rapidapi.com/news?count=100&mkt=en-US&safeSearch=Off&${router.queryParams}&headlineCount=100&textFormat=Raw`,
+      `https://bing-news-search1.p.rapidapi.com/news?count=1&mkt=en-US&safeSearch=Off&${router.queryParams}&headlineCount=100&textFormat=Raw`,
       {
         method: 'GET',
         headers: {
