@@ -1,5 +1,5 @@
 const fetch = require('node-fetch');
-const { YAMMA_API_ENDPOINT } = require('../config');
+const { YAMMA_API_ENDPOINT, YAMMA_AUTH_KEY } = require('../config');
 
 const EventService = {
   processEvents(events, defaultCategory) {
@@ -29,12 +29,13 @@ const EventService = {
         method: 'POST',
         headers: {
           'content-type': 'application/json',
+          'Authorization': `Bearer ${YAMMA_AUTH_KEY}`
         },
         body: JSON.stringify({ event: fEvent }),
       });
     } catch (er) {
       console.log('there was an error with this unformatted event: ', uEvent);
-      return { error: er };
+      return { formatingError: er };
     }
   },
 };

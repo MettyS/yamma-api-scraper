@@ -14,16 +14,23 @@ const YammaApiService = {
     const formattedEvents = EventService.processEvents(events, category);
     
     formattedEvents.forEach((req) => {
-      if(!req.error)
+      if(!req.formatingError)
         this.handlePromise(req);
     });
   },
 
   async handlePromise(eventPromise) {
+
     eventPromise
       .then((res) => res.json())
       .then((res) => {
-        //console.log('no error');
+
+        if(res.error) {
+          console.log('Unsuccessful...');
+          console.log(res.error)
+        }else
+          console.log('Success!');
+      
       })
       .catch((er) => {
         console.log('ERROR: ', er);
