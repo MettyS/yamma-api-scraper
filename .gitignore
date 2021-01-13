@@ -105,3 +105,6 @@ dist
 
 # Local vscode configs
 .vscode
+
+example_output/
+
