@@ -28,7 +28,6 @@ const YammaApiService = {
 
 
     formattedEvents.forEach((req) => {
-      if(!req.formatingError)
         this.handlePromise(req);
     });
   },

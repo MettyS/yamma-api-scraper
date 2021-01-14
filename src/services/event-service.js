@@ -1,10 +1,26 @@
 const fetch = require('node-fetch');
 const { YAMMA_API_ENDPOINT, YAMMA_AUTH_KEY } = require('../config');
 
+class EventFormattingError extends Error {
+  constructor(message) {
+    super(message);
+  }
+}
+
 const EventService = {
   processEvents(events, defaultCategory) {
     return events.map((uEvent) => {
+      try {
       return this.formatFetchEvent(uEvent, defaultCategory);
+      }
+      catch(er) {
+        if(er instanceof EventFormattingError)
+          console.log('ATTENTION ----> there was an EventFormattingError: ');
+        else 
+          console.log('Error that was NOT an EventFormattingError: ');
+          
+        console.log(er);
+      }
     });
   },
   formatFetchEvent(uEvent, defaultCategory) {
@@ -22,7 +38,7 @@ const EventService = {
         source_img: uEvent.provider[0].image
           ? uEvent.provider[0].image.thumbnail.contentUrl
           : 'no image',
-        date_published: uEvent.datePublished,
+        date_published: uEvent.datePublished
       };
 
       return fetch(`${YAMMA_API_ENDPOINT}`, {
@@ -35,7 +51,8 @@ const EventService = {
       });
     } catch (er) {
       console.log('there was an error with this unformatted event: ', uEvent);
-      return { formatingError: er };
+      
+      throw new EventFormattingError(er.message);
     }
   },
 };
