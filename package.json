@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "nodemon --ignore './output/' src/server.js",
     "devFix": "NODE_ENV=dev_test nodemon --ignore './output/' src/server.js",
-    "commandline": "START_UP_MODE=commandline nodemon src/server.js",
-    "start": "START_UP_MODE=wakeup nodemon src/server.js",
+    "commandline": "START_UP_MODE=commandline node src/server.js",
+    "start": "START_UP_MODE=wakeup node src/server.js",
     "predeploy": "npm audit",
     "deploy": "git push heroku master",
     "format": "prettier --write ."
