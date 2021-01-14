@@ -27,12 +27,6 @@ const YammaApiService = {
       if(!req.formatingError)
         this.handlePromise(req);
     });
-    })
-    .catch(er => {
-      console.log(er);
-    })
-
-    
   },
 
   async handlePromise(eventPromise) {
