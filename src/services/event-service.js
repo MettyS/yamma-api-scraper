@@ -11,14 +11,15 @@ const EventService = {
   processEvents(events, defaultCategory) {
     return events.map((uEvent) => {
       try {
-      return this.formatFetchEvent(uEvent, defaultCategory);
+      const eventPromise =  this.formatFetchEvent(uEvent, defaultCategory);
+      return eventPromise;
       }
       catch(er) {
         if(er instanceof EventFormattingError)
           console.log('ATTENTION ----> there was an EventFormattingError: ');
         else 
           console.log('Error that was NOT an EventFormattingError: ');
-          
+
         console.log(er);
       }
     });
@@ -32,8 +33,12 @@ const EventService = {
         title: uEvent.name,
         categories: defaultCategory,
         description: uEvent.description,
-        event_img: uEvent.image.thumbnail.contentUrl,
-        source_name: uEvent.provider[0].name,
+        event_img: uEvent.image
+          ? uEvent.image.thumbnail.contentUrl
+          : 'no image',
+        source_name: uEvent.provider[0] 
+          ? uEvent.provider[0].name 
+          : 'no provider_name',
         source_url: uEvent.url,
         source_img: uEvent.provider[0].image
           ? uEvent.provider[0].image.thumbnail.contentUrl
