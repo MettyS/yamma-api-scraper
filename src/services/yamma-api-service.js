@@ -20,9 +20,6 @@ const YammaApiService = {
       return;
     }
 
-    console.log('sending unformatted events: ');
-    console.log(eventRes.value);
-
     const events = eventRes.value;
     const formattedEvents = EventService.processEvents(events, category);
 
