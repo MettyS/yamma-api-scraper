@@ -31,7 +31,7 @@ const EventService = {
           'content-type': 'application/json',
           'Authorization': `Bearer ${YAMMA_AUTH_KEY}`
         },
-        body: JSON.stringify({ event: fEvent }),
+        body: JSON.stringify({ event: fEvent })
       });
     } catch (er) {
       console.log('there was an error with this unformatted event: ', uEvent);
