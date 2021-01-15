@@ -1,10 +1,27 @@
 const fetch = require('node-fetch');
 const { YAMMA_API_ENDPOINT, YAMMA_AUTH_KEY } = require('../config');
 
+class EventFormattingError extends Error {
+  constructor(message) {
+    super(message);
+  }
+}
+
 const EventService = {
   processEvents(events, defaultCategory) {
     return events.map((uEvent) => {
-      return this.formatFetchEvent(uEvent, defaultCategory);
+      try {
+      const eventPromise =  this.formatFetchEvent(uEvent, defaultCategory);
+      return eventPromise;
+      }
+      catch(er) {
+        if(er instanceof EventFormattingError)
+          console.log('ATTENTION ----> there was an EventFormattingError: ');
+        else 
+          console.log('Error that was NOT an EventFormattingError: ');
+
+        console.log(er);
+      }
     });
   },
   formatFetchEvent(uEvent, defaultCategory) {
@@ -16,13 +33,17 @@ const EventService = {
         title: uEvent.name,
         categories: defaultCategory,
         description: uEvent.description,
-        event_img: uEvent.image.thumbnail.contentUrl,
-        source_name: uEvent.provider[0].name,
+        event_img: uEvent.image
+          ? uEvent.image.thumbnail.contentUrl
+          : 'no image',
+        source_name: uEvent.provider[0] 
+          ? uEvent.provider[0].name 
+          : 'no provider_name',
         source_url: uEvent.url,
         source_img: uEvent.provider[0].image
           ? uEvent.provider[0].image.thumbnail.contentUrl
           : 'no image',
-        date_published: uEvent.datePublished,
+        date_published: uEvent.datePublished
       };
 
       return fetch(`${YAMMA_API_ENDPOINT}`, {
@@ -31,11 +52,12 @@ const EventService = {
           'content-type': 'application/json',
           'Authorization': `Bearer ${YAMMA_AUTH_KEY}`
         },
-        body: JSON.stringify({ event: fEvent }),
+        body: JSON.stringify({ event: fEvent })
       });
     } catch (er) {
       console.log('there was an error with this unformatted event: ', uEvent);
-      return { formatingError: er };
+      
+      throw new EventFormattingError(er.message);
     }
   },
 };
