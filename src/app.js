@@ -102,6 +102,7 @@ else if(START_UP_MODE === 'wakeup'){
 
 // Sample GET endpoint
 app.get('/', (req, res, next) => {
+  console.log('This is the api-scraper service for yamma-api-scraper');
   res.send('This is the api-scraper service for yamma-api-scraper');
 });
 
